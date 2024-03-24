@@ -14,7 +14,7 @@ build:
     - fragmenstein=fragmenstein.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
