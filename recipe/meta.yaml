@@ -1,5 +1,5 @@
 {% set name = "fragmenstein" %}
-{% set version = "1.0.6" %}
+{% set version = "1.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Fragmenstein-{{ version }}.tar.gz
-  sha256: 1b68a11b77132afbf52b77e491e54963c925f9a83c85fcc5622b570f5b42cb89
+  sha256: 713c57b587671026185a686bcdccaeaaf3d1007fb7932a51bcee7cf428974e75
 
 build:
   entry_points:
