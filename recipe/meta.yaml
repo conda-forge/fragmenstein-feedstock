@@ -1,13 +1,13 @@
 {% set name = "fragmenstein" %}
-{% set version = "1.0.7" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Fragmenstein-{{ version }}.tar.gz
-  sha256: 713c57b587671026185a686bcdccaeaaf3d1007fb7932a51bcee7cf428974e75
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/Fragmenstein-{{ version }}.tar.gz
+  sha256: 848675e92f9354ffa9de764df5a21bc45147fcb439ecf103726c0c974c67de35
 
 build:
   entry_points:
@@ -20,8 +20,10 @@ requirements:
   host:
     - python >=3.7
     - pip
+    - setuptools
   run:
     - python >=3.7
+    - setuptools
     - requests >=2.27.1
     - numpy >=1.21.6
     - scipy >=1.7.3
