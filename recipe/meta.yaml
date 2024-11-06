@@ -23,6 +23,7 @@ requirements:
     - setuptools
   run:
     - python >=3.7
+    - setuptools
     - requests >=2.27.1
     - numpy >=1.21.6
     - scipy >=1.7.3
