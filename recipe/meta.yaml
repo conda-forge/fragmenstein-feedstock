@@ -14,15 +14,15 @@ build:
     - fragmenstein=fragmenstein.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - setuptools
     - requests >=2.27.1
     - numpy >=1.21.6
@@ -49,6 +49,7 @@ test:
     - fragmenstein --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/matteoferla/Fragmenstein
