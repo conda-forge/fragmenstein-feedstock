@@ -1,20 +1,20 @@
 {% set name = "fragmenstein" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/Fragmenstein-{{ version }}.tar.gz
-  sha256: a2c11203cbc38becb5ac6303261d098325f94cc676f19c5d983a9085cc8ebf7b
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: e8e64e16e374f90c81162d20a6fbb2bd7d32338aa7f2346e42fb1844a8d50885
 
 build:
   entry_points:
     - fragmenstein=fragmenstein.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
